@@ -5,7 +5,7 @@ esphome:
   name_add_mac_suffix: True
   project: 
     name: AmadeaSystem.Amadea Presence Bare
-    version: "1.0.3.1"
+    version: "1.0.3.2"
 
 esp32:
   board: esp32dev

@@ -18,14 +18,14 @@ substitutions:
   # TX: This line is used to send data to the device at the other end.
   # RX: This line is used to receive data from the device at the other end.
   # The tx/rx nomenclature used here is is from the perspective of the ESP32.
-  uart_tx: GPIO17
-  uart_rx: GPIO16
+  # uart_tx: GPIO17
+  # uart_rx: GPIO16
   mmwave_occupancy_out: GPIO21
   # mmwave_occupancy_out: GPIO32
   status_led_pin: GPIO14
 
-  # uart_tx: GPIO16
-  # uart_rx: GPIO17
+  uart_tx: GPIO16
+  uart_rx: GPIO17
   # mmwave_occupancy_out: GPIO12
 
 
