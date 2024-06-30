@@ -19,7 +19,7 @@ substitutions:
   # The tx/rx nomenclature used here is is from the perspective of the ESP32.
   uart_tx: GPIO17
   uart_rx: GPIO16
-  uart_baudrate: 9600
+  # uart_baudrate: 9600
   mmwave_occupancy_out: GPIO21
   status_led_pin: GPIO14
 
