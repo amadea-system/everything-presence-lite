@@ -1,0 +1,45 @@
+esphome:
+  name: ${name}
+  comment: Amadea Presence Bare
+  friendly_name: ${friendly_name}
+  name_add_mac_suffix: True
+  project: 
+    name: AmadeaSystem.Amadea Presence Bare
+    version: "1.0.3"
+
+esp32:
+  board: esp32dev
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+  level: ${log_level}
+
+# Enable Home Assistant API
+api:
+
+ota:
+  platform: esphome
+
+wifi:
+
+improv_serial:
+
+i2c:
+ sda: 21
+ scl: 22
+ scan: true
+
+light:
+  - platform: status_led
+    name: ESP32 LED
+    # pin: GPIO14
+    pin: ${status_led_pin}
+    internal: False
+    restore_mode: ALWAYS_OFF
+
+button:
+  - platform: restart
+    icon: mdi:power-cycle
+    name: "ESP Reboot"

@@ -1,0 +1,38 @@
+# ---------------------------------------- #
+# ESP32 D1 Mini Pin Outs: 
+# - https://github.com/LilyGO/ESP32-MINI-32-V1.3/
+# - https://community.openmqttgateway.com/t/esp32-mini-kit-pinout-is-there-a-mapping-table-to-lolin-esp32-pinout/2320
+# Info: https://smarthomescene.com/diy/diy-presence-sensor-with-25m-detection-range-using-dfrobot-c4001-and-esp32/
+#
+# ---------------------------------------- #
+
+substitutions:
+  name: "amadea-presence-alpha"
+  friendly_name: "Amadea Presence Alpha"
+  # illuminance_update_interval: "2s"
+  hidden_ssid: "false"
+  log_level: ERROR
+
+  # - Device Definitions - #
+  # TX: This line is used to send data to the device at the other end.
+  # RX: This line is used to receive data from the device at the other end.
+  # The tx/rx nomenclature used here is is from the perspective of the ESP32.
+  uart_tx: GPIO17
+  uart_rx: GPIO16
+  uart_baudrate: 9600
+  mmwave_occupancy_out: GPIO21
+  status_led_pin: GPIO14
+
+  # uart_tx: GPIO16
+  # uart_rx: GPIO17
+  # mmwave_occupancy_out: GPIO12
+
+
+dashboard_import:
+  package_import_url: github://amadea-system/everything-presence-lite/amadea-presence-D1Mini-Alpha-sen0609.yaml@main
+  import_full_config: false # or true
+
+packages:
+  device_base: !include amadea-common/amadea-presence-base.yaml
+  ld2450_base: !include amadea-common/sen0609-base.yaml
+  # bluetooth_base: !include common/bluetooth-base.yaml
